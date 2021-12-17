@@ -1,0 +1,31 @@
+.tab-list{
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  line-height: 40px;
+}
+.tab-list span.active{
+  color: blueviolet;
+  font-size: 20px;
+}
+.nav-list{
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  line-height: 40px;
+}
+.nav-list .left,.nav-list .right{
+  width: 80px;
+  text-align: center;
+  background-color: chocolate;
+}
+.nav-list .center{
+  flex: 1;
+  background-color: chartreuse;
+}
