@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import Remark from './Remark'
 import TextAreaCom from './TextArea'
+import request from "../../http/request"
 export default class home extends PureComponent {
   constructor(props){
     super(props)
@@ -33,5 +34,22 @@ export default class home extends PureComponent {
     this.setState({
       commentList:[...this.state.commentList,comment]
     })
+    request({
+      url:'/get',
+      params:comment,
+    }).then(res=>{
+      console.log(res)
+    }).catch(err=>{
+      console.log(err)
+    })
+    // request({
+    //   url:"/post",
+    //   data:comment,
+    //   methods: "post",
+    // }).then(res=>{
+    //   console.log(res)
+    // }).catch(err=>{
+    //   console.log(err)
+    // })
   }
 }
