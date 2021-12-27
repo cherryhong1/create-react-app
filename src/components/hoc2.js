@@ -1,5 +1,5 @@
-import React,{PureComponent,createContext, useCallback} from "react";
-import enhanceProps from "../utils/hoc";
+import React,{PureComponent,createContext} from "react";
+// import enhanceProps from "../utils/hoc";
 const UserConText = createContext({
   nickName:'默认',
   level:-1
@@ -29,7 +29,7 @@ function Footer(props){
     </UserConText.Consumer>
   )
 }
-const EnhanceHeader = enhanceProps(Header,{Header:1.88})
+// const EnhanceHeader = enhanceProps(Header,{Header:1.88})
 
 export default  class App extends PureComponent{
   render() {
