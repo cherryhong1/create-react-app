@@ -19,6 +19,7 @@ import React, { Component } from "react";
 // import Model from "./page/Model";
 // import ThemeProviderStyled from "./page/ThemeProviderStyled";
 import CommentHome from "./page/remark/home"
+import CSSTransitionCom from "./page/CSSTransition"
 import "./style/index.css";
 
 export default class App extends Component {
@@ -29,6 +30,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
+        <CSSTransitionCom></CSSTransitionCom>
         <CommentHome></CommentHome>
         {/*<LifeCycle></LifeCycle>
         
