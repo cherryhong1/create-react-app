@@ -20,6 +20,10 @@ import React, { Component } from "react";
 // import ThemeProviderStyled from "./page/ThemeProviderStyled";
 import CommentHome from "./page/remark/home"
 import CSSTransitionCom from "./page/CSSTransition"
+import HomeStore from "./page/homeStore";
+import HomeStore2 from "./page/homeStore2";
+import {StoreContext} from "./utils/context"
+import store from "./store"
 import "./style/index.css";
 
 export default class App extends Component {
@@ -30,10 +34,13 @@ export default class App extends Component {
   render() {
     return (
       <div>
+        <StoreContext.Provider value={store}>
+          <HomeStore2></HomeStore2>
+        </StoreContext.Provider>
+        <HomeStore></HomeStore>
         <CSSTransitionCom></CSSTransitionCom>
         <CommentHome></CommentHome>
         {/*<LifeCycle></LifeCycle>
-        
         <Hoc></Hoc>
         <Form3></Form3>
         <Form2></Form2>
