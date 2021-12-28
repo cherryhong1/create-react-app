@@ -17,3 +17,18 @@ const reducer = (state = initialState, { type, payload }) => {
   }
 }
 
+const store = redux.createStore(reducer)
+
+store.subscribe(()=>{
+  console.log(store.getState())
+})
+store.dispatch({
+  type:'INCREMENT'
+})
+store.dispatch({
+  type:'DECREMENT'
+})
+store.dispatch({
+  dispatch:'ADD_NUMBER',
+  number:5
+})
