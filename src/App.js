@@ -22,7 +22,8 @@ import CommentHome from "./page/remark/home"
 import CSSTransitionCom from "./page/CSSTransition"
 import HomeStore from "./page/homeStore";
 import HomeStore2 from "./page/homeStore2";
-import {StoreContext} from "./utils/context"
+// import {StoreContext} from "./utils/context"
+// import { Provider } from "react-redux";
 import store from "./store"
 import "./style/index.css";
 
@@ -34,9 +35,9 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <StoreContext.Provider value={store}>
+        {/* <Provider value={store}>
           <HomeStore2></HomeStore2>
-        </StoreContext.Provider>
+        </Provider> */}
         <HomeStore></HomeStore>
         <CSSTransitionCom></CSSTransitionCom>
         <CommentHome></CommentHome>
